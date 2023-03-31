@@ -9,9 +9,8 @@
         public event MethodKeeper onCount;
         public void Count () 
         {
-            for (int i = 0; i < 1001; i++)
+            for (int i = 0; i < 101; i++)
             {
-                //Console.WriteLine(i);
                 if (i == _score)
                 {
                     onCount();

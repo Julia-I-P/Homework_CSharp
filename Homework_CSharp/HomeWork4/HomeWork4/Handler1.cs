@@ -1,6 +1,4 @@
-﻿using static System.Formats.Asn1.AsnWriter;
-
-namespace HomeWork4
+﻿namespace HomeWork4
 {
     internal class Handler1
     {
