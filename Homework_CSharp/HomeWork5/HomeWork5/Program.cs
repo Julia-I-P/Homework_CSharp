@@ -7,6 +7,8 @@ class Program
     {
         try
         {
+            //это если мы хотим создать zip-архив из кода
+
             //указание путей к архивируемой папке, архиву и папке извлечения
             //string startPath = @".\start";
             string zipPath = @".\result.zip";
