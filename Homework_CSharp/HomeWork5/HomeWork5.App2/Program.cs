@@ -1,8 +1,12 @@
-﻿namespace HomeWork5.App2
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace HomeWork5.App2
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             try
             {
@@ -14,7 +18,7 @@
                 string homeWork12txtPath = di + "/Lesson12Homework.txt";
 
                 StreamReader fs = new StreamReader(homeWork12txtPath);
-                string csvPath = fs.ReadToEnd();
+                string csvPath = await fs.ReadToEndAsync();
                 fs.Close();
 
                 // создаём объект StreamReader для считывания информации из csv файла
@@ -22,7 +26,7 @@
                 // создаём список типа Record для удобного хранения информации о файлах 
                 List<Record> records = new List<Record>();
                 // считываем данные из csv файла в строку csvline
-                string csvline = csvReader.ReadToEnd();
+                string csvline = await csvReader.ReadToEndAsync();
                 csvReader.Close();
                 // нарезаем строку csvline в массив строк csvLineSplit
                 string[] csvlineSplit = csvline.Split('\t');
